@@ -52,7 +52,7 @@
 
 - [Dynamic Edge-Conditioned Filters in Convolutional Neural Networks on Graphs (CVPR2017)](https://arxiv.org/pdf/1704.02901.pdf)
 
-- [Protein interface prediction using graph convolutional networks (NIPS2017)](https://papers.nips.cc/paper/7231-protein-interface-prediction-using-graph	-convolutional-networks.pdf)
+- [Protein interface prediction using graph convolutional networks (NIPS2017)](https://papers.nips.cc/paper/7231-protein-interface-prediction-using-graph-convolutional-networks.pdf)
 
 - [Gated Graph Sequence Neural Networks (ICLR2016)](https://arxiv.org/pdf/1511.05493.pdf)
 
