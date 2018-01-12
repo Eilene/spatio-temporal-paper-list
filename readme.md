@@ -14,7 +14,7 @@
 > 在上一篇的基础上希望减少参数，类比图像上CNN的局部连接，希望定义的kernel只在节点和它的近邻之间产生联系，定义interpolation kernel作用在要学的参数上。另外这篇文章还提出建图的方法，某些具有相互联系的数据却并不存在自然的图，构图方法有unsupervised grapp estimation和supervised graph estimation。
 
 - [convolutional neural networks on graphs with fast localized spectral filtering (NIPS2016)](https://arxiv.org/pdf/1606.09375.pdf)
-> 包括两个部分工作，一个就是用多项式kernel，降低参数，并且拉普拉斯矩阵K次方上，两点最短路径大于K，则取值为0 的性质保持localize。另外提出pooling的方法，通过添加fake node贪心的将所有节点组织成二叉树，在树上做ppoling。
+> 包括两个部分工作，一个就是用多项式kernel，降低参数，并且拉普拉斯矩阵K次方上，两点最短路径大于K，则取值为0 的性质保持localize，并用切比雪夫多项式近似来加速，且省掉拉普拉斯矩阵特征分解的步骤。另外提出pooling的方法，通过添加fake node贪心的将所有节点组织成二叉树，在树上做pOoling。
 
 - [semi-supervised classification with graph convolutional networks (ICLR2017)](https://arxiv.org/pdf/1609.02907.pdf)
 > 对上文的方法作了进一步简化，首先把多项式kernel的项控制在两个，并且约束两个参数值相同，主要是在citation网络的节点分类上，训练时每一类有20个带标签数据，共7个类，预测时结果显著比原来方法好
