@@ -34,6 +34,9 @@
 - [Geometric deep learning: going beyond Euclidean data (IEEE Signal Processing Magazine 2017)](https://arxiv.org/pdf/1611.08097.pdf)
 > 一篇review
 
+- [Spatio-Temporal Graph Convolutional Networks A Deep Learning Framework for Traffic Forecasting (IJCAI 2018)](https://arxiv.org/pdf/1709.04875v4)
+> 使用16年半监督的近似谱图卷积得到的图卷积作为空间上的卷积操作，时间上使用一维卷积对所有顶点进行卷积，组成了时空卷积块，在加州PeMS和北京市的两个数据集上做了验证，取得了不错的效果。
+
 下面几篇在处理dynamic graph，把传统CNN与图上CNN统一起来
 
 - [Transfer learning for deep learning on graph-structured data (AAAI2017)](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14803/14387)
