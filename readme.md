@@ -35,7 +35,10 @@
 > 一篇review
 
 - [Spatio-Temporal Graph Convolutional Networks A Deep Learning Framework for Traffic Forecasting (IJCAI 2018)](https://arxiv.org/pdf/1709.04875v4)
-> 使用16年半监督的近似谱图卷积得到的图卷积作为空间上的卷积操作，时间上使用一维卷积对所有顶点进行卷积，组成了时空卷积块，在加州PeMS和北京市的两个数据集上做了验证，取得了不错的效果。
+> 使用Kipf & Welling 2017的近似谱图卷积得到的图卷积作为空间上的卷积操作，时间上使用一维卷积对所有顶点进行卷积，两者交替进行，组成了时空卷积块，在加州PeMS和北京市的两个数据集上做了验证，取得了不错的效果。
+
+- [Spatial Temporal Graph Convolutional Networks for Skeleton-Based Action Recognition (AAAI 2018)](https://arxiv.org/pdf/1801.07455.pdf)
+> 使用图卷积处理动作识别。以人体骨骼的关节为图的顶点，以人体的躯干为边，将连续的时间片上相同的关节连接起来，构造三维的时空图结构。通过卷积在图像上的定义，类比出卷积在图上的定义，对顶点的邻居进行子集划分，每个子集与对应的权重相乘，得到时空图卷积的定义。使用Kipf & Welling 2017的公式进行实现。
 
 下面几篇在处理dynamic graph，把传统CNN与图上CNN统一起来
 
