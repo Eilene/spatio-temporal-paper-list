@@ -44,7 +44,8 @@
 
 - [Transfer learning for deep learning on graph-structured data (AAAI2017)](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14803/14387)
 
-- [Graph Convolution: A High-Order and Adaptive Approach ](https://arxiv.org/pdf/1706.09916.pdf)
+- [Graph Convolution: A High-Order and Adaptive Approach (NIPS 2016)](https://arxiv.org/pdf/1706.09916.pdf)
+> Kipf & Welling的方法使用的是一阶邻居，作者在本文中利用邻接矩阵的k次幂，提出了k阶邻居的图卷积方法。将k阶邻接矩阵与顶点特征矩阵拼接，与权重矩阵Q进行线性组合，构造出可以同时捕获顶点特征与图结构性质的自适应卷积核。在citation graphs上对顶点分类，以及在分子性质预测上进行了测试。
 
 - [Learning Graph Convolution Filters from Data Manifold](https://arxiv.org/pdf/1710.11577.pdf)
 
