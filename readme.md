@@ -42,14 +42,15 @@
 
 下面几篇在处理dynamic graph，把传统CNN与图上CNN统一起来
 
-- [Transfer learning for deep learning on graph-structured data (AAAI2017)](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14803/14387)
+- [Transfer learning for deep learning on graph-structured data (AAAI 2017)](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14803/14387)
 
 - [Graph Convolution: A High-Order and Adaptive Approach (NIPS 2016)](https://arxiv.org/pdf/1706.09916.pdf)
 > Kipf & Welling的方法使用的是一阶邻居，作者在本文中利用邻接矩阵的k次幂，提出了k阶邻居的图卷积方法。将k阶邻接矩阵与顶点特征矩阵拼接，与权重矩阵Q进行线性组合，构造出可以同时捕获顶点特征与图结构性质的自适应卷积核。在citation graphs上对顶点分类，以及在分子性质预测上进行了测试。
 
 - [Learning Graph Convolution Filters from Data Manifold](https://arxiv.org/pdf/1710.11577.pdf)
 
-- [Diffusion-Convolutional Neural Networks](https://arxiv.org/pdf/1511.02136.pdf)
+- [Diffusion-Convolutional Neural Networks (NIPS 2016)](https://arxiv.org/pdf/1511.02136.pdf)
+> 在卷积操作中融入了h-hop转移概率矩阵，通过对每个顶点计算该顶点到其他所有顶点的转移概率与特征矩阵的乘积，构造顶点新的特征表示，即diffusion-convolutional representation，表征顶点信息的扩散，然后乘以权重矩阵W，加激活函数，得到卷积的定义。在顶点分类和图分类上做了测试。作者提到的模型缺陷是空间复杂度高，以及模型不能捕获尺度较大的空间依赖关系。
 
 - [Dynamic Graph Convolutional Networks](https://arxiv.org/pdf/1704.06199.pdf)
 
