@@ -1,5 +1,5 @@
 ## Spatio-temporal modeling 论文列表（主要是graph convolution相关）
-小白一枚，接下来希望在时空建模上有点见解，图是数据表示非常自然的方式，现在在处理图上数据的任务时常用network embedding的方法和的grometric model方法。network embedding初衷是把图上数据表示成张量形式，可以满足deep learning model的输入，但这种方法在学数据表示时存在信息压缩；后者则是修改模型，使得满足输入结构化，即输入数据保留图的形式。接下来打算在第二种思想上展开，保留图上数据的空间约束，同时有些图上数据是时间序列的，如路网上每时刻节点的流量速度等，如何对时间序列上的网络数据用deep model建模，保留空间约束是接下来的学习方向。
+小白一枚，接下来希望在时空建模上有点见解，图是数据表示非常自然的方式，现在在处理图上数据的任务时常用network embedding的方法和的geometric model方法。network embedding初衷是把图上数据表示成张量形式，可以满足deep learning model的输入，但这种方法在学数据表示时存在信息压缩；后者则是修改模型，使得满足输入结构化，即输入数据保留图的形式。接下来打算在第二种思想上展开，保留图上数据的空间约束，同时有些图上数据是时间序列的，如路网上每时刻节点的流量速度等，如何对时间序列上的网络数据用deep model建模，保留空间约束是接下来的学习方向。
 #### 这里会整理些近期看的论文及简单描述(可能不准确)，会持续更新，希望同样研究这个方向的小伙伴可以一起交流～
 - [The graph neural network model （TNN 2009）](https://repository.hkbu.edu.hk/cgi/viewcontent.cgi?referer=https://www.google.com/&httpsredir=1&article=1000&context=vprd_ja)
 
