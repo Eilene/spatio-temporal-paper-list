@@ -25,7 +25,7 @@
 - [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICLR2017)](https://arxiv.org/pdf/1612.07659.pdf)
 > 把时间数据和空间数据结合起来，方法有输入数据做完图卷积然后再输入LSTM，或者把LSTM中的矩阵乘法替换成图卷积。
 
-- [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting (ICLP 2018)](https://arxiv.org/pdf/1707.01926.pdf)
+- [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting (ICLR 2018)](https://arxiv.org/pdf/1707.01926.pdf)
 > [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICLR2017)](https://arxiv.org/pdf/1612.07659.pdf)中的方法的应用，对其中Defferrard的k阶切比雪夫图卷积进行了替换，使用了[Teng et al., 2016](http://www-bcf.usc.edu/~shanghua/teaching/Fall2016-670/networkDataAnalysisPrintedBook.pdf)的图上随机游走的平稳分布的闭式解，定义了扩散卷积(Diffusion convolution)，使用前一篇论文中的模型2，用GRU构造了DCRNN(DCGRU)，对道路传感器网络上下一时刻的速度预测，取得了state of the art的表现。
 
 - [Convolutional Networks on Graphs for Learning Molecular Fingerprints (NIPS2015)](https://arxiv.org/pdf/1509.09292.pdf)
