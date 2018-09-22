@@ -34,6 +34,8 @@
 - [Geometric deep learning: going beyond Euclidean data (IEEE Signal Processing Magazine 2017)](https://arxiv.org/pdf/1611.08097.pdf)
 > 一篇review
 
+- [Geometric deep learning on graphs and manifolds using mixture model CNNs (CVPR2017)](https://arxiv.org/pdf/1611.08402.pdf)
+
 下面几篇在处理dynamic graph，把传统CNN与图上CNN统一起来
 
 - [Transfer learning for deep learning on graph-structured data (AAAI2017)](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14803/14387)
@@ -48,7 +50,7 @@
 
 下面几篇还没有读
 
-- [Geometric deep learning on graphs and manifolds using mixture model CNNs (CVPR2017)](https://arxiv.org/pdf/1611.08402.pdf)
+
 
 - [Dynamic Edge-Conditioned Filters in Convolutional Neural Networks on Graphs (CVPR2017)](https://arxiv.org/pdf/1704.02901.pdf)
 
