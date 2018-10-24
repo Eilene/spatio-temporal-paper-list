@@ -22,11 +22,11 @@
 - [Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting (NIPS2015)](https://arxiv.org/pdf/1506.04214.pdf)
 > 利用雷达降雨量预测，不同雷达之间有空间联系，同一个雷达的序列数据存在时间联系，用传统CNN刻画雷达间的联系，用LSTM刻画时间联系，把LSTM中参数和输入数据的矩阵乘法替换成卷积，使得同时建模空间和时间约束，虽然输入数据依旧是标准张量，但是把时间空间结合起来。
 
-- [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICLR2017)](https://arxiv.org/pdf/1612.07659.pdf)
+- [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICLR 2017 reject)](https://arxiv.org/pdf/1612.07659.pdf)
 > 把时间数据和空间数据结合起来，方法有输入数据做完图卷积然后再输入LSTM，或者把LSTM中的矩阵乘法替换成图卷积。
 
 - [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting (ICLR 2018)](https://arxiv.org/pdf/1707.01926.pdf)
-> [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICLR2017)](https://arxiv.org/pdf/1612.07659.pdf)中的方法的应用，对其中Defferrard的k阶切比雪夫图卷积进行了替换，使用了[Teng et al., 2016](http://www-bcf.usc.edu/~shanghua/teaching/Fall2016-670/networkDataAnalysisPrintedBook.pdf)的图上随机游走的平稳分布的闭式解，定义了扩散卷积(Diffusion convolution)，使用前一篇论文中的模型2，用GRU构造了DCRNN(DCGRU)，对道路传感器网络上下一时刻的速度预测，取得了state of the art的表现。
+> [Structured Sequence Modeling with Graph Convolutional Recurrent Networks](https://arxiv.org/pdf/1612.07659.pdf)中的方法的应用，对其中Defferrard的k阶切比雪夫图卷积进行了替换，使用了[Teng et al., 2016](http://www-bcf.usc.edu/~shanghua/teaching/Fall2016-670/networkDataAnalysisPrintedBook.pdf)的图上随机游走的平稳分布的闭式解，定义了扩散卷积(Diffusion convolution)，使用前一篇论文中的模型2，用GRU构造了DCRNN(DCGRU)，对道路传感器网络上下一时刻的速度预测，取得了state of the art的表现。
 
 - [Convolutional Networks on Graphs for Learning Molecular Fingerprints (NIPS2015)](https://arxiv.org/pdf/1509.09292.pdf)
 > 分子是原子及连边的图，任务是预测分子的属性，把原始方法中的hash函数替换成用一层neural network学一个smooth的function，利用hash结果取余找index的过程替换成softmax。输入是图的形式，但是处理方法和上面论文不太一样。
