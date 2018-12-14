@@ -54,6 +54,9 @@
 
 - [Dynamic Graph Convolutional Networks](https://arxiv.org/pdf/1704.06199.pdf)
 
+- [Multistep Speed Prediction on Traffic Networks: A Graph Convolutional Sequence-to-Sequence Learning Approach with Attention Mechanism（2018）](https://arxiv.org/ftp/arxiv/papers/1810/1810.10237.pdf)
+> 这是清华大学和高德地图合作的一项研究。作者采用了GCN+Seq2Seq的混合模型，提出了k-hop的类似拉普拉斯矩阵的邻接矩阵，完成了北京市二环线的多步的车速预测，并取得不错的效果。
+
 下面几篇还没有读
 
 - [Geometric deep learning on graphs and manifolds using mixture model CNNs (CVPR2017)](https://arxiv.org/pdf/1611.08402.pdf)
