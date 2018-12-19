@@ -11,7 +11,7 @@
 
 - [deep convolutional networks on graph-structured data (ICLR2015)](https://arxiv.org/pdf/1506.05163.pdf)      
    [PPT](http://web.eng.tau.ac.il/deep_learn/wp-content/uploads/2017/03/Deep-Convolutional-Networks-on-Graph-Structured-Data.pdf)
-> 在上一篇的基础上希望减少参数，类比图像上CNN的局部连接，希望定义的kernel只在节点和它的近邻之间产生联系，定义interpolation kernel作用在要学的参数上。另外这篇文章还提出建图的方法，某些具有相互联系的数据却并不存在自然的图，构图方法有unsupervised grapp estimation和supervised graph estimation。
+> 在上一篇的基础上希望减少参数，类比图像上CNN的局部连接，希望定义的kernel只在节点和它的近邻之间产生联系，定义interpolation kernel作用在要学的参数上。另外这篇文章还提出建图的方法，某些具有相互联系的数据却并不存在自然的图，构图方法有unsupervised graph estimation和supervised graph estimation。
 
 - [convolutional neural networks on graphs with fast localized spectral filtering (NIPS2016)](https://arxiv.org/pdf/1606.09375.pdf)
 > 包括两个部分工作，一个就是用多项式kernel，降低参数，并且拉普拉斯矩阵K次方上，两点最短路径大于K，则取值为0 的性质保持localize，并用切比雪夫多项式近似来加速，且省掉拉普拉斯矩阵特征分解的步骤。另外提出pooling的方法，通过添加fake node贪心的将所有节点组织成二叉树，在树上做pooling。
@@ -22,11 +22,11 @@
 - [Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting (NIPS2015)](https://arxiv.org/pdf/1506.04214.pdf)
 > 利用雷达降雨量预测，不同雷达之间有空间联系，同一个雷达的序列数据存在时间联系，用传统CNN刻画雷达间的联系，用LSTM刻画时间联系，把LSTM中参数和输入数据的矩阵乘法替换成卷积，使得同时建模空间和时间约束，虽然输入数据依旧是标准张量，但是把时间空间结合起来。
 
-- [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICLR2017)](https://arxiv.org/pdf/1612.07659.pdf)
+- [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICLR 2017 reject)](https://arxiv.org/pdf/1612.07659.pdf)
 > 把时间数据和空间数据结合起来，方法有输入数据做完图卷积然后再输入LSTM，或者把LSTM中的矩阵乘法替换成图卷积。
 
 - [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting (ICLR 2018)](https://arxiv.org/pdf/1707.01926.pdf)
-> [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICLR2017)](https://arxiv.org/pdf/1612.07659.pdf)中的方法的应用，对其中Defferrard的k阶切比雪夫图卷积进行了替换，使用了[Teng et al., 2016](http://www-bcf.usc.edu/~shanghua/teaching/Fall2016-670/networkDataAnalysisPrintedBook.pdf)的图上随机游走的平稳分布的闭式解，定义了扩散卷积(Diffusion convolution)，使用前一篇论文中的模型2，用GRU构造了DCRNN(DCGRU)，对道路传感器网络上下一时刻的速度预测，取得了state of the art的表现。
+> [Structured Sequence Modeling with Graph Convolutional Recurrent Networks](https://arxiv.org/pdf/1612.07659.pdf)中的方法的应用，对其中Defferrard的k阶切比雪夫图卷积进行了替换，使用了[Teng et al., 2016](http://www-bcf.usc.edu/~shanghua/teaching/Fall2016-670/networkDataAnalysisPrintedBook.pdf)的图上随机游走的平稳分布的闭式解，定义了扩散卷积(Diffusion convolution)，使用前一篇论文中的模型2，用GRU构造了DCRNN(DCGRU)，对道路传感器网络上下一时刻的速度预测，取得了state of the art的表现。
 
 - [Convolutional Networks on Graphs for Learning Molecular Fingerprints (NIPS2015)](https://arxiv.org/pdf/1509.09292.pdf)
 > 分子是原子及连边的图，任务是预测分子的属性，把原始方法中的hash函数替换成用一层neural network学一个smooth的function，利用hash结果取余找index的过程替换成softmax。输入是图的形式，但是处理方法和上面论文不太一样。
@@ -53,6 +53,9 @@
 > 在卷积操作中融入了h-hop转移概率矩阵，通过对每个顶点计算该顶点到其他所有顶点的转移概率与特征矩阵的乘积，构造顶点新的特征表示，即diffusion-convolutional representation，表征顶点信息的扩散，然后乘以权重矩阵W，加激活函数，得到卷积的定义。在顶点分类和图分类上做了测试。作者提到的模型缺陷是空间复杂度高，以及模型不能捕获尺度较大的空间依赖关系。
 
 - [Dynamic Graph Convolutional Networks](https://arxiv.org/pdf/1704.06199.pdf)
+
+- [Multistep Speed Prediction on Traffic Networks: A Graph Convolutional Sequence-to-Sequence Learning Approach with Attention Mechanism（2018）](https://arxiv.org/ftp/arxiv/papers/1810/1810.10237.pdf)
+> 这是清华大学和高德地图合作的一项研究。作者采用了GCN+Seq2Seq的混合模型，提出了k-hop的类似拉普拉斯矩阵的邻接矩阵，完成了北京市二环线的多步的车速预测，并取得不错的效果。
 
 下面几篇还没有读
 
