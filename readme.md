@@ -65,3 +65,4 @@
 
 - [Gated Graph Sequence Neural Networks (ICLR2016)](https://arxiv.org/pdf/1511.05493.pdf)
 
+![avatar](Wechat.jpeg)
