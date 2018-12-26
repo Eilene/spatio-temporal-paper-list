@@ -67,6 +67,9 @@
 - [Multistep Speed Prediction on Traffic Networks: A Graph Convolutional Sequence-to-Sequence Learning Approach with Attention Mechanism（2018）](https://arxiv.org/ftp/arxiv/papers/1810/1810.10237.pdf)
 > 这是清华大学和高德地图合作的一项研究。作者采用了GCN+Seq2Seq的混合模型，提出了k-hop的类似拉普拉斯矩阵的邻接矩阵，完成了北京市二环线的多步的车速预测，并取得不错的效果。
 
+- Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting （AAAI 2019）
+> 使用三个组件对时间序列上的近期、日周期、周周期三个模式进行建模，每个组件使用K阶切比雪夫图卷积捕获空间关系，使用一维卷积捕获时间关系，在K阶切比雪夫多项式展开的图卷积内融入了注意力机制来捕获空间动态性，在时间维上使用注意力机制让模型动态地捕获时间关系。在PeMS数据集上进行了实验。
+
 下面几篇还没有读
 
 - [Geometric deep learning on graphs and manifolds using mixture model CNNs (CVPR2017)](https://arxiv.org/pdf/1611.08402.pdf)
