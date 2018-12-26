@@ -19,6 +19,9 @@
 - [Graph Wavelet Neural Network (ICLR2019)](https://openreview.net/forum?id=H1ewdiR5tQ)
 > 用小波变换代替傅立叶变换实现图卷积。小波变换相对于傅立叶变换具有局部性，稀疏性和可解释性的性质，这些使得应用小波变换的图卷积神经网络更加高效，也满足了localize性质。
 
+- [Wavelets on Graphs via Spectral Graph Theory](https://arxiv.org/abs/0912.3848)
+> 图上小波变换的一些理论知识，包括如何加速计算，licalize的性质保证等。
+
 - [deep convolutional networks on graph-structured data (ICLR2015)](https://arxiv.org/pdf/1506.05163.pdf)      
    [PPT](http://web.eng.tau.ac.il/deep_learn/wp-content/uploads/2017/03/Deep-Convolutional-Networks-on-Graph-Structured-Data.pdf)
 > 在上一篇的基础上希望减少参数，类比图像上CNN的局部连接，希望定义的kernel只在节点和它的近邻之间产生联系，定义interpolation kernel作用在要学的参数上。另外这篇文章还提出建图的方法，某些具有相互联系的数据却并不存在自然的图，构图方法有unsupervised graph estimation和supervised graph estimation。
