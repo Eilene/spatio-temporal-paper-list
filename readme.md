@@ -8,14 +8,15 @@
 
 小白一枚，接下来希望在时空建模上有点见解，图是数据表示非常自然的方式，现在在处理图上数据的任务时常用network embedding的方法和的geometric model方法。network embedding初衷是把图上数据表示成张量形式，可以满足deep learning model的输入，但这种方法在学数据表示时存在信息压缩；后者则是修改模型，使得满足输入结构化，即输入数据保留图的形式。接下来打算在第二种思想上展开，保留图上数据的空间约束，同时有些图上数据是时间序列的，如路网上每时刻节点的流量速度等，如何对时间序列上的网络数据用deep model建模，保留空间约束是接下来的学习方向。
 #### 这里会整理些近期看的论文及简单描述(可能不准确)，会持续更新，希望同样研究这个方向的小伙伴可以一起交流～
-###综述篇
+
+### 综述篇
 - [Geometric deep learning: going beyond Euclidean data (IEEE Signal Processing Magazine 2017)](https://arxiv.org/pdf/1611.08097.pdf)
 > 关于非欧数据（主要就是图数据和流形数据）的深度学习的review
 
 - [Graph Neural Networks:A Review of Methods and Applications](https://arxiv.org/pdf/1812.08434.pdf)
 > 关于GCN领域的方法和应用的综述
 
-###方法篇
+### 方法篇
 - [The graph neural network model （TNN 2009）](https://repository.hkbu.edu.hk/cgi/viewcontent.cgi?referer=https://www.google.com/&httpsredir=1&article=1000&context=vprd_ja)
 
 - [The emerging field of signal processing on graphs (IEEE Signal Processing Magazine 2013)](https://arxiv.org/pdf/1211.0053.pdf)
@@ -88,7 +89,7 @@
 
 - [Gated Graph Sequence Neural Networks (ICLR2016)](https://arxiv.org/pdf/1511.05493.pdf)
 
-###应用篇
+### 应用篇
 
 注：后续有不同研究领域的小伙伴，欢迎继续添加相应领域的paper~
 
