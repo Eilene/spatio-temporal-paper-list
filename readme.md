@@ -47,15 +47,8 @@
 - [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICLR 2017 reject)](https://arxiv.org/pdf/1612.07659.pdf)
 > 把时间数据和空间数据结合起来，方法有输入数据做完图卷积然后再输入LSTM，或者把LSTM中的矩阵乘法替换成图卷积。
 
-- [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting (ICLR 2018)](https://arxiv.org/pdf/1707.01926.pdf)
-> [Structured Sequence Modeling with Graph Convolutional Recurrent Networks](https://arxiv.org/pdf/1612.07659.pdf)中的方法的应用，对其中Defferrard的k阶切比雪夫图卷积进行了替换，使用了[Teng et al., 2016](http://www-bcf.usc.edu/~shanghua/teaching/Fall2016-670/networkDataAnalysisPrintedBook.pdf)的图上随机游走的平稳分布的闭式解，定义了扩散卷积(Diffusion convolution)，使用前一篇论文中的模型2，用GRU构造了DCRNN(DCGRU)，对道路传感器网络上下一时刻的速度预测，取得了state of the art的表现。
-
 - [Convolutional Networks on Graphs for Learning Molecular Fingerprints (NIPS2015)](https://arxiv.org/pdf/1509.09292.pdf)
 > 分子是原子及连边的图，任务是预测分子的属性，把原始方法中的hash函数替换成用一层neural network学一个smooth的function，利用hash结果取余找index的过程替换成softmax。输入是图的形式，但是处理方法和上面论文不太一样。
-
-
-- [Spatio-Temporal Graph Convolutional Networks A Deep Learning Framework for Traffic Forecasting (IJCAI 2018)](https://arxiv.org/pdf/1709.04875v4)
-> 使用Kipf & Welling 2017的近似谱图卷积得到的图卷积作为空间上的卷积操作，时间上使用一维卷积对所有顶点进行卷积，两者交替进行，组成了时空卷积块，在加州PeMS和北京市的两个数据集上做了验证，取得了不错的效果。
 
 - [Spatial Temporal Graph Convolutional Networks for Skeleton-Based Action Recognition (AAAI 2018)](https://arxiv.org/pdf/1801.07455.pdf)
 > 使用图卷积处理动作识别。以人体骨骼的关节为图的顶点，以人体的躯干为边，将连续的时间片上相同的关节连接起来，构造三维的时空图结构。通过卷积在图像上的定义，类比出卷积在图上的定义，对顶点的邻居进行子集划分，每个子集与对应的权重相乘，得到时空图卷积的定义。使用Kipf & Welling 2017的公式进行实现。
@@ -64,7 +57,7 @@
 
 - [Transfer learning for deep learning on graph-structured data (AAAI 2017)](https://aaai.org/ocs/index.php/AAAI/AAAI17/paper/view/14803/14387)
 
-- [Graph Convolution: A High-Order and Adaptive Approach (NIPS 2016)](https://arxiv.org/pdf/1706.09916.pdf)
+- [Graph Convolution: A High-Order and Adaptive Approach](https://arxiv.org/pdf/1706.09916.pdf)
 > Kipf & Welling的方法使用的是一阶邻居，作者在本文中利用邻接矩阵的k次幂，提出了k阶邻居的图卷积方法。将k阶邻接矩阵与顶点特征矩阵拼接，与权重矩阵Q进行线性组合，构造出可以同时捕获顶点特征与图结构性质的自适应卷积核。在citation graphs上对顶点分类，以及在分子性质预测上进行了测试。
 
 - [Learning Graph Convolution Filters from Data Manifold](https://arxiv.org/pdf/1710.11577.pdf)
@@ -76,7 +69,6 @@
 
 - [Representation Learning on Graphs with Jumping Knowledge Networks](https://arxiv.org/pdf/1806.03536.pdf)
 > 针对不同节点可能邻域范围不同，提出了Jumping Knowledge Network，分别采用了Concat、Max-Pooling、LSTM-Atten作为最后一层的aggregator，最后在Citeseer & Cora和Reddit上做实验验证
-
 
 下面几篇还没有读
 
@@ -95,13 +87,17 @@
 
 #### 交通预测
 
-- [Multistep Speed Prediction on Traffic Networks: A Graph Convolutional Sequence-to-Sequence Learning Approach with Attention Mechanism（2018）](https://arxiv.org/ftp/arxiv/papers/1810/1810.10237.pdf)
-> 清华大学和高德地图合作的一项研究。作者采用了GCN+Seq2Seq的混合模型，提出了k-hop的类似拉普拉斯矩阵的邻接矩阵，完成了北京市二环线的多步的车速预测，并取得不错的效果。
+- [Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting (ICLR 2018)](https://arxiv.org/pdf/1707.01926.pdf)
+> DCRNN，是[Structured Sequence Modeling with Graph Convolutional Recurrent Networks](https://arxiv.org/pdf/1612.07659.pdf)中的方法的应用，对其中Defferrard 的 k 阶切比雪夫图卷积进行了替换，使用了[Teng et al., 2016](http://www-bcf.usc.edu/~shanghua/teaching/Fall2016-670/networkDataAnalysisPrintedBook.pdf)的图上随机游走的平稳分布的闭式解，定义了扩散卷积(Diffusion convolution)，其实是一种有向图卷积，使用前一篇论文中的模型2，用 GRU 构造了 DCRNN(DCGRU)，对道路传感器网络上下一时刻的速度预测，取得了state of the art的表现，12个点预测12个点，在METR-LA 和 PEMS 上进行了实验，数据已公开。
 
-- [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting](https://arxiv.org/pdf/1709.04875.pdf)
-> 分别采用ChebyNet和GCN两种方式，将图卷积网络应用在交通流短时预测上，同时采用迭代式进行多步预测，最终在PEMS上进行实验验证<br>
+- [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting (IJCAI 2018)](https://arxiv.org/pdf/1709.04875.pdf)
+> STGCN，分别采用 ChebyNet 和 GCN 两种方式，将图卷积网络应用在交通流短时预测上，图卷积做空间关系建模，一维卷积做时间关系建模，交替迭代地组成时空卷积块，堆叠两个块构成模型，最终在 PEMS 和北京市两个数据集上进行实验验证，12个点预测12个点。
+
+- [Multistep Speed Prediction on Traffic Networks: A Graph Convolutional Sequence-to-Sequence Learning Approach with Attention Mechanism（TRC 2018）](https://arxiv.org/ftp/arxiv/papers/1810/1810.10237.pdf)
+> 清华大学和高德地图合作的一项研究。作者采用了 GCN + Seq2Seq + Attention 的混合模型，将路网中的边构建成图中的结点，在 GCN 上做了改进，将邻接矩阵扩展到 k 阶并与一个权重矩阵相乘，类似 HA-GCN(2016)，实现了邻居信息聚合时权重的自由调整，可以处理有向图。时间关系上使用 Seq2Seq + Attention 建模，完成了北京市二环线的多步的车速预测，对比的方法中没有近几年出现的时空预测模型。
 
 - Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting （AAAI 2019）
-> 使用三个组件对时间序列上的近期、日周期、周周期三个模式进行建模，每个组件使用K阶切比雪夫图卷积捕获空间关系，使用一维卷积捕获时间关系，在K阶切比雪夫多项式展开的图卷积内融入了注意力机制来捕获空间动态性，在时间维上使用注意力机制让模型动态地捕获时间关系。在PeMS数据集上进行了实验。
+> ASTGCN，使用三个组件对时间序列上的近期、日周期、周周期三个模式进行建模，每个组件使用 K 阶切比雪夫图卷积捕获空间关系，使用一维卷积捕获时间关系，在 K 阶切比雪夫多项式展开的图卷积内融入了注意力机制来捕获空间动态性，在时间维上使用注意力机制让模型动态地捕获时间关系。在 PeMS 数据集上进行了实验，数据已公开。
 
-
+- [Spatiotemporal Multi-Graph Convolution Network for Ride-hailing Demand Forecasting (AAAI 2019)](http://www-scf.usc.edu/~yaguang/papers/aaai19_multi_graph_convolution.pdf)
+> ST-MGCN，网约车需求预测，T个点预测1个点。空间依赖建模上：以图的形式表示数据，从空间地理关系、区域功能相似度、区域交通连通性三个角度构造了三个不同的图，提出了多图卷积，分别用 k 阶 ChebNet 对每个图做图卷积，然后将多个图的卷积结果进行聚合(sum, average 等)成一个图；时间依赖建模上：提出了融合背景信息的 Contextual Gated RNN (CGRNN)，用 ChebNet 对每个结点卷积后，得到他们的邻居表示，即每个结点的背景信息表示，与原结点特征拼接，用一个两层全连接神经网络计算出 T 个权重，将权重乘到历史 T 个时刻的图上，对历史值进行缩放，然后用一个共享的 RNN，针对每个结点形成的长度为 T 的时间序列建模，得到每个结点新的时间表示。最后预测每个点的网约车需求，对比的深度学习方法有上述的 DCRNN 和 STGCN 两个，数据是北京和上海的网约车需求数据。
