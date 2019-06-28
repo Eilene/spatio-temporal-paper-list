@@ -96,7 +96,7 @@
 - [Multistep Speed Prediction on Traffic Networks: A Graph Convolutional Sequence-to-Sequence Learning Approach with Attention Mechanism（TRC 2018）](https://arxiv.org/ftp/arxiv/papers/1810/1810.10237.pdf)
 > 清华大学和高德地图合作的一项研究。作者采用了 GCN + Seq2Seq + Attention 的混合模型，将路网中的边构建成图中的结点，在 GCN 上做了改进，将邻接矩阵扩展到 k 阶并与一个权重矩阵相乘，类似 HA-GCN(2016)，实现了邻居信息聚合时权重的自由调整，可以处理有向图。时间关系上使用 Seq2Seq + Attention 建模，完成了北京市二环线的多步的车速预测，对比的方法中没有近几年出现的时空预测模型。
 
-- Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting （AAAI 2019）
+- [Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting （AAAI 2019）](https://github.com/Davidham3/ASTGCN)
 > ASTGCN，使用三个组件对时间序列上的近期、日周期、周周期三个模式进行建模，每个组件使用 K 阶切比雪夫图卷积捕获空间关系，使用一维卷积捕获时间关系，在 K 阶切比雪夫多项式展开的图卷积内融入了注意力机制来捕获空间动态性，在时间维上使用注意力机制让模型动态地捕获时间关系。在 PeMS 数据集上进行了实验，数据已公开。
 
 - [Spatiotemporal Multi-Graph Convolution Network for Ride-hailing Demand Forecasting (AAAI 2019)](http://www-scf.usc.edu/~yaguang/papers/aaai19_multi_graph_convolution.pdf)
