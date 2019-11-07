@@ -44,7 +44,7 @@
 - [Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting (NIPS2015)](https://arxiv.org/pdf/1506.04214.pdf)
 > 利用雷达降雨量预测，不同雷达之间有空间联系，同一个雷达的序列数据存在时间联系，用传统CNN刻画雷达间的联系，用LSTM刻画时间联系，把LSTM中参数和输入数据的矩阵乘法替换成卷积，使得同时建模空间和时间约束，虽然输入数据依旧是标准张量，但是把时间空间结合起来。
 
-- [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICLR 2017 reject)](https://arxiv.org/pdf/1612.07659.pdf)
+- [Structured Sequence Modeling with Graph Convolutional Recurrent Networks (ICONIP 2017)](https://arxiv.org/pdf/1612.07659.pdf)
 > 把时间数据和空间数据结合起来，方法有输入数据做完图卷积然后再输入LSTM，或者把LSTM中的矩阵乘法替换成图卷积。
 
 - [Convolutional Networks on Graphs for Learning Molecular Fingerprints (NIPS2015)](https://arxiv.org/pdf/1509.09292.pdf)
@@ -93,7 +93,7 @@
 - [Spatio-Temporal Graph Convolutional Networks: A Deep Learning Framework for Traffic Forecasting (IJCAI 2018)](https://arxiv.org/pdf/1709.04875.pdf)
 > STGCN，分别采用 ChebyNet 和 GCN 两种方式，将图卷积网络应用在交通流短时预测上，图卷积做空间关系建模，一维卷积做时间关系建模，交替迭代地组成时空卷积块，堆叠两个块构成模型，最终在 PEMS 和北京市两个数据集上进行实验验证，12个点预测12个点。
 
-- [Multistep Speed Prediction on Traffic Networks: A Graph Convolutional Sequence-to-Sequence Learning Approach with Attention Mechanism（TRC 2018）](https://arxiv.org/ftp/arxiv/papers/1810/1810.10237.pdf)
+- [Multistep Speed Prediction on Traffic Networks: A Graph Convolutional Sequence-to-Sequence Learning Approach with Attention Mechanism（TRC 2019）](https://arxiv.org/ftp/arxiv/papers/1810/1810.10237.pdf)
 > 清华大学和高德地图合作的一项研究。作者采用了 GCN + Seq2Seq + Attention 的混合模型，将路网中的边构建成图中的结点，在 GCN 上做了改进，将邻接矩阵扩展到 k 阶并与一个权重矩阵相乘，类似 HA-GCN(2016)，实现了邻居信息聚合时权重的自由调整，可以处理有向图。时间关系上使用 Seq2Seq + Attention 建模，完成了北京市二环线的多步的车速预测，对比的方法中没有近几年出现的时空预测模型。
 
 - [Attention Based Spatial-Temporal Graph Convolutional Networks for Traffic Flow Forecasting （AAAI 2019）](https://github.com/Davidham3/ASTGCN)
